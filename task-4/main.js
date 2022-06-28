@@ -1,9 +1,19 @@
 const prompt = require('prompt');
 prompt.start();
 
+prompt.get("input", function(err, result) {
+    let str = result.input;
 
-prompt.get('input', function (err, result) {
-  
-    // Write code here
-  
+    let a = 0;
+    let b = 0;
+
+    for (i = 0; i < str.length; i++) {
+        if (str[i] === "!") {
+            a = a + 1;
+        } else if (str[i] === ".") {
+            b = b + 1;
+        }
+    }
+    let sum = a + b;
+    console.log(sum);
 });
